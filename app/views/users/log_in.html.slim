@@ -1,0 +1,16 @@
+h1 
+    | Log in 
+
+=form_with model: @user, url: "/log_in_check" , method: :get do |f|
+    = f.label "Email"
+    br 
+    = f.text_field :email 
+    br 
+    =f.label "Password"
+    br 
+    =f.text_field :password 
+    br 
+    br 
+    =f.submit ("Submit")
+
+=link_to "Register", register_path 

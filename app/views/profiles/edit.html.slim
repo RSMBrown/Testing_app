@@ -1,0 +1,26 @@
+h1 
+    |  Update profile 
+
+=form_with model: @profile, url: profile_path, method: :put do |form|
+    =form.label "Name: "
+    =form.text_field :name 
+    br 
+    br                 
+    =form.label "Surname: "
+    =form.text_field :surname 
+    br 
+    br 
+    =form.label "User name: "
+    =form.text_field :username
+    br 
+    br 
+    =form.label "Date of birth: "
+    =form.date_field :date_of_birth
+    =form.hidden_field :user_id, :value => @user.id
+    br 
+    br 
+    =form.label "Uplaod profile picture: "
+    =form.file_field :image
+    br 
+    br 
+    =form.submit 

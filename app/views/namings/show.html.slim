@@ -1,0 +1,9 @@
+
+h1
+    =@naming.tbox1 
+    |, 
+    =@naming.tbox2
+
+=link_to "Delete", naming_path(@naming),
+                method: :delete,
+                data: { confrim: "Are you sure?" }

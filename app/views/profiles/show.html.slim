@@ -1,0 +1,21 @@
+h1 
+    |  Profile 
+
+h1 
+    =@profile.username 
+
+h2 
+    =@profile.name
+    |    
+    =@profile.surname
+
+h4 
+    =@profile.date_of_birth
+
+-if @profile.image.attached?
+    =image_tag @profile.image
+    br 
+
+=link_to "Update profile", edit_profile_path(user_id: @user.id, id: @profile.id)
+br 
+=link_to "Delete profile", profile_path(user_id: @user.id, id: @profile.id), method: :delete, data: { confrim: "Are you sure?" }

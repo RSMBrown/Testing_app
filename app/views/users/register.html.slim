@@ -1,0 +1,17 @@
+h1
+    | Register for App 
+
+=form_with model: @user, url: register_save_path, method: :post do |f|
+    = f.label "Email"
+    br 
+    = f.text_field :email 
+    br 
+    =f.label "Password"
+    br 
+    =f.text_field :password 
+    br 
+    br 
+    =f.submit ("Submit")
+
+
+=link_to "Log in", root_path 

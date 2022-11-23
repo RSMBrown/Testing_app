@@ -1,0 +1,12 @@
+h1
+    | Testing  
+
+-@namings.each do |n|
+    =link_to n.tbox1, n 
+    |, 
+    =n.tbox2 
+    br 
+
+-
+br 
+=link_to "New", new_naming_path

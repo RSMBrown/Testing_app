@@ -1,0 +1,13 @@
+h1 
+    | New 
+
+=form_with model: @naming, url: '/save', method: :post do |f|
+    = f.label "Insert some text"
+    br
+    = f.text_area :tbox1
+    br 
+    = f.label "Insert some more text"
+    br
+    = f.text_area :tbox2
+    br 
+    = f.submit ("Submit")
